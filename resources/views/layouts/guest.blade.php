@@ -45,6 +45,8 @@
         <!-- Styles -->
         @livewireStyles
         @vite('resources/css/guest.css')
+        @vite('resources/css/swiper-bundle.min.css')
+        {{-- <link href="{{ asset('css/swiper-bundle.min.css') }}"> --}}
     </head>
     <body
         id="main"
@@ -70,5 +72,10 @@
         @livewireScripts
         @vite('resources/js/guest.js')
         @stack('scripts')
+        {{-- @vite('resources/js/swiper-bundle.min.js') --}}
+        {{-- @vite('resources/js/functions.js') --}}
+        <script src="{{ asset('js/swiper-bundle.min.js') }}"></script>
+        <script src="{{ asset('js/functions.js') }}"></script>
+
     </body>
 </html>

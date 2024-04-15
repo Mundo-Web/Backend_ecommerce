@@ -1,23 +1,42 @@
 <x-guest-layout>
-    <div class="py-32">
-        <div class="sm:mx-auto sm:w-full sm:max-w-md">
-            <h1 class="text-center text-3xl font-bold tracking-tight text-slate-900">
-                {{ __('Account registration') }}
-            </h1>
-            <p class="mt-2 text-center text-sm text-slate-600">
-                {{ __('Already have one?') }}
-                <a
-                    href="{{ route('login') }}"
-                    class="btn btn-link"
-                >
-                    {{ __('Sign in here') }}
-                </a>
-            </p>
-        </div>
+    <style>
+        header,footer{
+            display: none;
+        }
+    </style>    
+    
+<div class="flex flex-row md:h-screen justify-center py-12 md:py-0">
+    <div class="bg-blue-500 basis-1/2 hidden lg:block font-poppins">
+      <!-- Imagen ocupando toda la altura y sin desbordar -->
+      <div
+        class="register bg-cover bg-center bg-no-repeat w-full h-full"
+      >
+      <div
+      class="font-medium text-[24px] py-10 bg-black bg-opacity-25 text-center text-white flex flex-row justify-center items-center"
+      >
+      <a href="/">
+       <img src="{{ asset('img/images/logo_footer_decotab.png') }}" class="w-28"/>
+      </a></div>
+      </div>
+    </div>
 
-        <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-            <x-card>
-                <x-slot:content class="!py-8 sm:!px-10">
+    <!-- Segundo div -->
+    <div
+      class="w-full lg:basis-1/2 text-[#151515] flex justify-center items-center font-poppins px-5 md:px-0"
+    >
+      <div class="w-full md:w-4/6 flex flex-col gap-5">
+        <div class="px-4 flex flex-col gap-5 text-center md:text-left">
+          <h1 class="font-semibold text-[40px]">{{ __('Account registration') }}</h1>
+          <p class="font-normal text-[16px]">
+            {{ __('Already have one?') }}
+            <a href="{{ route('login') }}" class="font-bold text-[16px] text-[#EB5D2C]"
+              >{{ __('Sign in') }}</a
+            >
+          </p>
+        </div>
+        <div class="">
+            <x-cardlogin>
+                <x-slot:content class="!py-8">
                     <form
                         method="POST"
                         action="{{ route('register') }}"
@@ -31,7 +50,7 @@
                                 :value="__('Your name')"
                             />
 
-                            <x-input
+                            <x-inputlogin
                                 id="name"
                                 class="block mt-1 w-full sm:text-sm"
                                 type="text"
@@ -54,7 +73,7 @@
                                 :value="__('Email address')"
                             />
 
-                            <x-input
+                            <x-inputlogin
                                 id="email"
                                 class="block mt-1 w-full sm:text-sm"
                                 type="email"
@@ -76,7 +95,7 @@
                                 :value="__('Password')"
                             />
 
-                            <x-input
+                            <x-inputlogin
                                 id="password"
                                 class="block mt-1 w-full sm:text-sm"
                                 type="password"
@@ -98,7 +117,7 @@
                                 :value="__('Confirm Password')"
                             />
 
-                            <x-input
+                            <x-inputlogin
                                 id="password_confirmation"
                                 class="block mt-1 w-full sm:text-sm"
                                 type="password"
@@ -115,14 +134,17 @@
                         <div class="mt-6">
                             <button
                                 type="submit"
-                                class="btn btn-primary w-full"
+                                class=" w-full text-white bg-[#151515] py-4 rounded-3xl "
                             >
                                 {{ __('Sign up') }}
                             </button>
                         </div>
                     </form>
                 </x-slot:content>
-            </x-card>
+            </x-cardlogin>
         </div>
+      </div>
     </div>
+  </div>
 </x-guest-layout>
+

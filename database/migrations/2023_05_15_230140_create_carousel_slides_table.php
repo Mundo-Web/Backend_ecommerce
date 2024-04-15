@@ -17,7 +17,10 @@ return new class extends Migration {
             $table->string('title');
             $table->string('description')->nullable();
             $table->string('button_link')->nullable();
+            $table->string('button_link_two')->nullable();
             $table->string('button_text')->nullable();
+            $table->string('button_text_two')->nullable();
+
             $table->timestamps();
         });
     }

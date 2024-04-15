@@ -8,3 +8,146 @@
 @import "./components/utilities.css";
 
 @config "./../../tailwind.guest.config.js";
+
+
+/* --- Productos destacados-- */
+
+/* .swiper-pagination-productos-destacados.swiper-pagination-horizontal {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ */
+
+ .productos-destacados {
+    position: relative;
+    /* height: 500px; */
+  }
+  
+  .swiper-pagination-productos-destacados.swiper-pagination-horizontal {
+    position: absolute;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    top: 0 !important;
+    left: 10px !important;
+    bottom: 0 !important;
+  
+    height: 50px;
+  }
+  
+  .swiper-pagination-productos-destacados
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: transparent;
+    /* background-image: url('./../../public/img/svg/bullets.svg'); */
+    background-image: url('./../img/svg/bullets.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 20px;
+    height: 20px;
+  }
+  .swiper-pagination-productos-destacados .swiper-pagination-bullet {
+    background-color: #eb5d2c;
+    opacity: 1;
+  }
+
+
+/* ---------------- Modificar los Bullets de swiper Beneficios -------------------- */
+.beneficioRelative {
+  position: relative;
+  z-index: 12;
+}
+.swiper-pagination-beneficios
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: transparent;
+  background-image: url('./../img/svg/bullets.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+}
+
+
+.swiper-pagination-beneficios .swiper-pagination-bullet {
+  background-color: #eb5d2c;
+  opacity: 1;
+}
+.swiper-pagination-beneficios.swiper-pagination-horizontal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*  position: absolute;
+
+  left: -295px;
+  --swiper-pagination-bottom: 670px; */
+}
+
+@media (min-width: 1024px) {
+  .swiper-pagination-beneficios.swiper-pagination-horizontal {
+    --swiper-pagination-bottom: 670px;
+    position: absolute;
+    justify-content: start;
+    /* padding: 0 13px; */
+  }
+}
+
+
+
+
+/* ----------------------- testimonios -------- */
+
+/* .swiper-pagination-productos-oferta.swiper-pagination-horizontal {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.myTestimonios {
+  position: relative;
+}
+
+.swiper-pagination-testimonios.swiper-pagination-horizontal {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .swiper-pagination-testimonios.swiper-pagination-horizontal {
+    justify-content: end;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    /* width: 200px !important; */
+    width: 100%;
+    padding-right: 5rem;
+    height: 50px;
+  }
+}
+
+.swiper-pagination-testimonios
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: transparent;
+  background-image: url('./../img/svg/bullets.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+}
+.swiper-pagination-testimonios .swiper-pagination-bullet {
+  background-color: #eb5d2c;
+  opacity: 1;
+}
+
+/* ---------------------------------------------- */
+
+.login {
+  background-image: url('./../img/login_decotab.png');
+}
+
+.register {
+  background-image: url('./../img/create_decotab.png');
+}

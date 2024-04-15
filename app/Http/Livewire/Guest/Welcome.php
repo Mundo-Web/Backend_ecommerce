@@ -53,6 +53,7 @@ class Welcome extends Component
                 ->where('slug', $this->template_settings->home_page_hero_carousel_handle)
                 ->first();
         }
+        
     }
 
     public function getPerkCarouselProperty()

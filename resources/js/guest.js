@@ -7,6 +7,7 @@ import mask from '@alpinejs/mask';
 import persist from '@alpinejs/persist';
 import collapse from '@alpinejs/collapse';
 import Clipboard from "@ryangjchandler/alpine-clipboard";
+import Swiper from 'swiper';
 
 window.Alpine = Alpine;
 Alpine.plugin(intersect);
@@ -16,3 +17,4 @@ Alpine.plugin(persist);
 Alpine.plugin(Clipboard);
 Alpine.plugin(collapse);
 Alpine.start();
+

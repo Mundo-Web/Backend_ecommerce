@@ -283,6 +283,25 @@
                     </div>
                     <div>
                         <x-input-label
+                            for="newSectionDescriptionInput"
+                            :value="__('Description')"
+                        />
+                        <div class="mt-2">
+                            <x-input
+                                wire:model.defer="newSectionData.description"
+                                type="text"
+                                id="newSectionDescriptionInput"
+                                class="block w-full sm:text-sm"
+                                placeholder="{{ __('New section description') }}"
+                            />
+                            <x-input-error
+                                for="newSectionData.description"
+                                class="mt-2"
+                            />
+                        </div>
+                    </div>
+                    <div>
+                        <x-input-label
                             for="newSectionDataLinkInput"
                             :value="__('Link (optional)')"
                         />
@@ -455,6 +474,25 @@
                             />
                             <x-input-error
                                 for="state.home_page_sections.{{ $editingSectionIndex }}.title"
+                                class="mt-2"
+                            />
+                        </div>
+                    </div>
+                    <div>
+                        <x-input-label
+                            for="newSectionDescriptionInput"
+                            :value="__('Description')"
+                        />
+                        <div class="mt-2">
+                            <x-input
+                                wire:model.defer="state.home_page_sections.{{ $editingSectionIndex }}.description"
+                                type="text"
+                                id="newSectionDescriptionInput"
+                                class="block w-full sm:text-sm"
+                                placeholder="{{ __('New section description') }}"
+                            />
+                            <x-input-error
+                                for="state.home_page_sections.{{ $editingSectionIndex }}.description"
                                 class="mt-2"
                             />
                         </div>

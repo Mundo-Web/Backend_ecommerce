@@ -30,6 +30,8 @@ class CarouselDetail extends Component
             'slide.description' => 'nullable',
             'slide.button_link' => 'nullable',
             'slide.button_text' => 'nullable',
+            'slide.button_link_two' => 'nullable',
+            'slide.button_text_two' => 'nullable',
         ];
     }
 
@@ -87,6 +89,8 @@ class CarouselDetail extends Component
             'slide.description' => 'nullable',
             'slide.button_link' => 'nullable',
             'slide.button_text' => 'nullable',
+            'slide.button_link_two' => 'nullable',
+            'slide.button_text_two' => 'nullable',
         ]);
 
         $this->slide->carousel_id = $this->carousel->id;

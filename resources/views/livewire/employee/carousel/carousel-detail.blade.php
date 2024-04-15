@@ -235,6 +235,38 @@
                             class="mt-1"
                         />
                     </div>
+                    <div>
+                        <x-input-label
+                            for="slideButtonLinkInputtwo"
+                            value="{{  __('Button link 2') }}"
+                        />
+                        <x-input
+                            wire:model.defer="slide.button_link_two"
+                            type="text"
+                            id="slideButtonLinkInput"
+                            class="mt-2 block w-full sm:text-sm"
+                        />
+                        <x-input-error
+                            for="slide.button_link_two"
+                            class="mt-1"
+                        />
+                    </div>
+                    <div>
+                        <x-input-label
+                            for="slideButtonTextInputtwo"
+                            value="{{  __('Button text 2') }}"
+                        />
+                        <x-input
+                            wire:model.defer="slide.button_text_two"
+                            type="text"
+                            id="slideButtonTextInput"
+                            class="mt-2 block w-full sm:text-sm"
+                        />
+                        <x-input-error
+                            for="slide.button_text_two"
+                            class="mt-1"
+                        />
+                    </div>
                     @if($slide->exists)
                         <div
                             x-data="{ confirmSlideDeletion: false }"
