@@ -45,7 +45,7 @@
         <!-- Styles -->
         @livewireStyles
         @vite('resources/css/guest.css')
-        @vite('resources/css/swiper-bundle.min.css')
+        {{-- @vite('resources/css/swiper-bundle.min.css') --}}
         <link href="{{ asset('css/swiper-bundle.min.css') }}">
     </head>
     <body
